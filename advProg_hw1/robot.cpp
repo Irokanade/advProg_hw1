@@ -7,6 +7,8 @@
 
 #include "robot.hpp"
 
+using namespace std;
+
 void Robot::setRobot(int coordX, int coordY, char dir) {
     this->coordX = coordX;
     this->coordY = coordY;

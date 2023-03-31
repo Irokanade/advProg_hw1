@@ -12,8 +12,6 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class Maze {
 public:
     // function to set the map, length and width
