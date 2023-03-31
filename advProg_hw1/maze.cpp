@@ -7,20 +7,24 @@
 
 #include "maze.hpp"
 
-void Maze::setMap(int length, int width, string map[]) {
-    this->length = length;
+void Maze::setMap(int width, int height, vector<string> map) {
     this->width = width;
+    this->height = height;
     this->mazeMap = map;
 }
 
-string *Maze::getmap() {
-    return this->mazeMap;
+char Maze::getXYofMap(int x, int y) const {
+    return mazeMap[x][y];
 }
 
-void Maze::setMapFromStdIO() {
-    
+int Maze::getWidth() const {
+    return width;
+}
+
+int Maze::getHeight() const {
+    return height;
 }
 
 void Maze::updateOneElementinMap(int x, int y, char newSymbol) {
-    this->mazeMap[x][y] = newSymbol;
+    mazeMap[x][y] = newSymbol;
 }

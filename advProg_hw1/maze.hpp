@@ -10,27 +10,29 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class Maze {
 public:
     // function to set the map, length and width
-    void setMap(int length, int width, string map[]);
+    void setMap(int width, int height, vector<string> map);
     
-    string *getmap();
+    char getXYofMap(int x, int y) const;
     
-    // function to set map from standard I/O
-    void setMapFromStdIO();
+    int getWidth() const;
+    
+    int getHeight() const;
     
     // update one character in the array
     void updateOneElementinMap(int x, int y, char newSymbol);
     
 private:
-    int length;
     int width;
-    // maze map would be an array of strings
-    string *mazeMap;
+    int height;
+    // maze map would be a vector of strings
+    vector<string> mazeMap;
 };
 
 
